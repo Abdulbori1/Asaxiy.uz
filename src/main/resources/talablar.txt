@@ -1,0 +1,76 @@
+****** Asaxiy.uz ******
+
+1. Profile entity
+id, attach, phone, name, pochta, birth day, address, address job, job, sex(jinsi mazgi), balance
+2. Attach entity
+id, url, origin_name, created_date, path
+3. Category entity
+id, name, created_date
+4. Book entity
+id, attach_id, title, category_id, BookType, description, price, duration, ISBN, Til, Yozuv, Author, Betlar soni, Nashriot, Muqovasi, Qogos formati, Chop etilgan yili
+6. Sevimlilar entity
+id, book_id, profile_id
+7. Sms entity
+id, phoneNumber, Profile_id, code
+8. Transaction entity
+id, fromType, profile_id, amount, created_date
+
+1. Profile
+** 1. Auth
+** 2. Registration
+**** 1. Phone number
+**** 2. Sms Code
+
+** 3. Update Profile Detail (USER, ADMIN)
+** 4. Delete Profile (Phone Number) (ADMIN)
+** 5. Profile list (ADMIN)
+** 6. Get By profile Phone Number (ADMIN)
+
+2. Attach
+** 1. Upload Photo (USER, ADMIN)
+** 2. Delete Photo(USER, ADMIN)
+** 3. Get By Id(ADMIN)
+** 4. Open Photo(USER, ADMIN)
+** 5. Download Photo(USER, ADMIN)
+
+3. Category
+** 1. Create Category
+** 2. Get By Id
+** 3. Get By List
+** 3. Delete Category
+
+4. Book
+** 1. Create Book
+** 2. Update Book
+** 3. Delete Book
+** 4. Get Book List (Pagination)
+** 5. Get By Id
+** 6. Get By Category_id (Pagination)
+** 7. Get By Author (Pagination)
+** 8. Get By Nashriot (Pagination)
+** 9. Get By Muqovasi (Pagination)
+** 10. Get By Til (Pagination)
+** 11. Filter
+narxi baland, narxi past, yangi, author, bookType
+
+BookDTOShortInfo(id,
+                attach_id, title,
+                category, price,Author)
+BookDTOInfo(id, attach_id, title,
+            category_id, description, price,
+            duration, ISBN, Til, Yozuv,
+            Author, Betlar soni, Nashriot,
+            Muqovasi, Qogos formati, Chop etilgan yili)
+5. Sevimlilar
+** 1. Sevimlilar Add Book
+** 2. Sevimlilar Delete Book
+** 3. Sevimlilar Get By Id
+** 4. Get By Profile_id (Murojaat qilgan userniki) (Pagination)
+
+6. Transaction
+** 1. Top Up Balance (USER)
+** 2. Deposit Balance (USER)
+** 3. Buy Book with BookType (USER)
+** 4. Get By Transaction List (Pagination) (ADMIN)
+** 5. Get By Transaction List (Pagination) (Murojat qilgan userniki) (USER)
+** 6. Get By Transaction List Profile_id (Pagination) (ADMIN)
